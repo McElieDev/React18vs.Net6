@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/shared/Layout";
+import AddSuperVillain from "./pages/AddSuperVillain";
+import AllSuperVillain from "./pages/AllSuperVillain";
+import UpdateSuperVillain from "./pages/UpdateSuperVillain";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<AllSuperVillain></AllSuperVillain>}></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/add-supervillain"
+            element={<AddSuperVillain></AddSuperVillain>}
+          ></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/update-supervillain/:id"
+            element={<UpdateSuperVillain></UpdateSuperVillain>}
+          ></Route>
+        </Routes>
+      </Layout>
     </div>
   );
 }
