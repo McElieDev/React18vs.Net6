@@ -8,11 +8,19 @@ import Button from "react-bootstrap/Button";
 import DeleteConfirmation from "../components/shared/DeleteConfirmation";
 
 function AllSuperVillain() {
-  const [SuperVillains, setSuperVillains] = useState([]); //set and update state of super villains and
+  const [superVillains, setSuperVillains] = useState([]); //set and update state of super villains and
   const [showModal, setShowModal] = useState(false); //set all Modal instances here
   const [itemToDelete, setItemToDelete] = useState(0); //set value of item to delete
 
   const navigate = useNavigate();
+  //const [refreshInterval, setRefreshInterval] = useState(1 || 0);
+  //const [_, forceUpdate] = useReducer((x) => x + 1, 0);
+  // useEffect(() => {
+  //   if (refreshInterval && refreshInterval > 0) {
+  //     const interval = setInterval(fetchMetrics, refreshInterval);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [refreshInterval]);
 
   useEffect(() => {
     axios.get("https://localhost:7127/SuperVillain").then((response) => {
@@ -20,7 +28,15 @@ function AllSuperVillain() {
         return response.data;
       });
     });
+    //  forceUpdate();
   }, []);
+
+  //Auto refresh interval to 1 minutes : 60 to 5 minutes 300
+  // setInterval(function () {
+  //   window.location.href = "/";
+  //   //window.location.reload();
+  //   //navigate("/");
+  // }, 60000);
 
   function showConfirmPopupHandler(id) {
     setShowModal(true);
@@ -71,7 +87,7 @@ function AllSuperVillain() {
       </Row>
 
       <Row xs={1} md={3} className="g-4 mt-1">
-        {SuperVillains.map((sv) => (
+        {superVillains.map((sv) => (
           <Col key={sv.id}>
             <Card>
               <Card.Img variant="top" src={sv.imageUrl} />
