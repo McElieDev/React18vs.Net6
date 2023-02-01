@@ -74,7 +74,7 @@ const Form = () => {
       <Container>
         <FormRow>
           <FormColumn small>
-            <FormTitle>Sign up</FormTitle>
+            <FormTitle>Get in touch</FormTitle>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>
@@ -88,7 +88,7 @@ const Form = () => {
                 </FormInputRow>
               ))}
 
-              <FormButton type="submit">Signup</FormButton>
+              <FormButton type="submit">Submit</FormButton>
             </FormWrapper>
             {error && (
               <FormMessage
