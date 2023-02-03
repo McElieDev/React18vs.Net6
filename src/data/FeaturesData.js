@@ -1,50 +1,60 @@
 import React from "react";
 
-import { BsFillShieldLockFill } from "react-icons/bs";
-import { IoIosOptions } from "react-icons/io";
-import { AiOutlineCloudUpload } from "react-icons/ai";
-import { BiSupport, BiDollar } from "react-icons/bi";
-import { GrHostMaintenance } from "react-icons/gr";
+//import { BsFillShieldLockFill } from "react-icons/bs";
+//import { IoIosOptions } from "react-icons/io";
+//import { AiOutlineCloudUpload } from "react-icons/ai";
+//import { BiDollar } from "react-icons/bi";
+import { FcPrint } from "react-icons/fc";
+import { FaDigitalTachograph } from "react-icons/fa";
+import { MdFormatShapes } from "react-icons/md";
+import {
+  GiVerticalBanner,
+  GiAztecCalendarSun,
+  GiTargetPoster,
+} from "react-icons/gi";
 const iconStyle = (Icon) => <Icon size="3rem" color="#0f0f0f" />;
 
 export const featuresData = [
   {
-    name: "Best Security",
+    name: "Digital Printing",
     description:
-      "We offer the best data security to our clients, which makes us stand out",
-    icon: iconStyle(BsFillShieldLockFill),
+      "We offer the best Flyers, brochures, Roller Banners, Calendars, Labels, small format printing which makes us stand out",
+    icon: iconStyle(GiAztecCalendarSun),
     imgClass: "one",
   },
   {
-    name: "Ease of Use",
-    description: "Our system is easy to use and integrate",
-    icon: iconStyle(IoIosOptions),
+    name: "Porters & Event branding",
+    description:
+      "One of our strength and standards on the market is Posters & Hanging and Event branding.",
+    icon: iconStyle(GiTargetPoster),
     imgClass: "two",
   },
   {
-    name: "Maintenance",
+    name: "Large format Printing",
     description:
-      "Our code is written in highest standards, which makes it highly sustainable",
-    icon: iconStyle(GrHostMaintenance),
+      "We specialize on Pop Up & Roll Up Banners, Vehicle Branding, Binding & Finishing",
+    icon: iconStyle(MdFormatShapes),
     imgClass: "three",
   },
   {
-    name: "24/7 Support",
-    description: "Our team is available at all times in case you need us",
-    icon: iconStyle(BiSupport),
+    name: "Label Printing",
+    description:
+      "We print paper & Vinyl stickers/labels, cut any shape/sie and more.",
+    icon: iconStyle(FcPrint),
     imgClass: "four",
   },
   {
-    name: "Price",
-    description: "We offer the highest value/cost ratio",
-    icon: iconStyle(BiDollar),
+    name: "Invitation Printing",
+    description:
+      "We offer the highest qulity of invitations inclusing Foiling, Embossing and Digital Die Cutting",
+    icon: iconStyle(FaDigitalTachograph),
     imgClass: "five",
   },
   {
-    name: "Scalable",
+    name: "Banners & Posters etc.",
     description:
-      "Our servers are located all over the world, therefore improving scalability and speed ",
-    icon: iconStyle(AiOutlineCloudUpload),
+      "Our printers are available for any type of printing services, therefore improving quality, delivery, quantity and speed ",
+    icon: iconStyle(GiVerticalBanner),
     imgClass: "six",
   },
 ];

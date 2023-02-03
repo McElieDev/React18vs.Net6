@@ -12,4 +12,9 @@ export const data = [
     to: "/gallery-enquiry",
     text: "Gallery & Enquiry",
   },
+  {
+    to: "/",
+    text: "Contact Us",
+    id: "contactus",
+  },
 ];

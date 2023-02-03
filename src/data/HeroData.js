@@ -17,11 +17,12 @@ export const heroTwo = {
   reverse: false,
   inverse: false,
   topLine: {
-    text: "Designed & Developed",
+    text: "Professional Printing Services",
   },
-  headline: "The best practices",
-  description: "Our clients have had the best experience working with us",
-  buttonLabel: "View Project",
+  headline: "Best on Quality & Fast Delivery ",
+  description:
+    "Our clients have had the best experience working with us. We have recently introduced a new Digital Printing for multiple Purposes and Production Services. ",
+  buttonLabel: "View a Demo",
 
   linkTo: "/more",
   imgStart: "start",
@@ -33,12 +34,12 @@ export const heroThree = {
   reverse: true,
   inverse: true,
   topLine: {
-    text: "Highly reputed brand",
+    text: "Highly reputed digital priting brand",
   },
   headline: "Why us? ",
   description:
-    "Our 9 year experience have allowed us to use the most innovative technologies and methodologies",
-  buttonLabel: "View Project",
+    "Our 7 year experience have allowed us to use the most innovative technologies and methodologies and stand amoung the best creative agency that delivers digital printing in South Africa",
+  buttonLabel: "View Gallery",
 
   linkTo: "/download",
   imgStart: "",

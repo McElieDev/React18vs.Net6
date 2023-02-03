@@ -10,19 +10,27 @@ import {
 } from "./HeroStyle";
 
 const Hero = () => {
+  //const navigate = useNavigate();
   return (
     <HeroSection>
       <HeroVideo src="./assets/hero.mp4" autoPlay muted />
       <Container>
-        <MainHeading>Your data is secure with us</MainHeading>
+        <MainHeading>Your Digital Printing service expert</MainHeading>
         <HeroText>
-          We provide the best security systems for cliennts all over the world
+          We provide the best digital printing services for clients nationwide.
         </HeroText>
         <ButtonWrapper>
-          <Link to="signup">
+          <Link to="gallery-enquiry">
             <Button>Get Started</Button>
           </Link>
-          <HeroButton>Find More</HeroButton>
+          <HeroButton>
+            <Link
+              to="gallery-enquiry"
+              style={{ textDecoration: "none", borderBottom: "none" }}
+            >
+              Get Quote
+            </Link>
+          </HeroButton>
         </ButtonWrapper>
       </Container>
     </HeroSection>

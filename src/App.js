@@ -11,7 +11,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignupPage";
 import Pricing from "./pages/PricingPage";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home}></Route>
-        <Route path="/gallery-enquiry" exact component={SignUp}></Route>
         <Route path="/pricing" exact component={Pricing}></Route>
+        <Route path="/gallery-enquiry" exact component={SignUp}></Route>
         <Route component={NotFound} />
       </Switch>
       <Footer />

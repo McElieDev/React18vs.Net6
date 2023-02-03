@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   background: transparent;
+
   margin-bottom: -80px;
   height: 80px;
   display: flex;
@@ -37,9 +38,16 @@ export const NavLogo = styled(Link)`
   z-index: 50;
 `;
 
+export const Slogan = styled.span`
+color: #fff, color: red, color: green, color: blue;
+
+
+`;
+
 export const NavIcon = styled.img`
-  margin-right: 1rem;
-  width: 3rem;
+  margin-right: 2rem;
+  width: 9rem;
+  margin-top: 1rem;
 `;
 
 export const MobileIcon = styled.div`
@@ -93,6 +101,7 @@ export const NavItem = styled.li`
 
     &:hover {
       border: none;
+      color: #fcc470;
     }
   }
 `;
@@ -106,7 +115,7 @@ export const NavLinks = styled.span`
   height: 100%;
 
   &:hover {
-    color: #c8c9d8;
+    color: #fcc470;
     transition: all 0.3s ease;
   }
 
