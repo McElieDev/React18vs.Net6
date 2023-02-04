@@ -17,4 +17,9 @@ export const data = [
     text: "Contact Us",
     id: "contactus",
   },
+  // {
+  //   to: "/telehone",
+  //   text: "Telephone: +27 11 354 2029",
+  //   id: "telephoneNumber",
+  // },
 ];

@@ -6,6 +6,11 @@ export const FormSection = styled.div`
   padding: 160px 0;
   /* background: ${({ inverse }) => (inverse ? "#101522" : "#fff")}; */
   background: #101522;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-color: #cacaca;
+  box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
 `;
 
 export const FormTitle = styled.h1`
@@ -129,4 +134,25 @@ export const FormButton = styled.button`
     transition: background-color 0.4s ease-in;
     background-color: black;
   }
+`;
+
+export const FormArea = styled.textarea`
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 5px;
+  height: 150px;
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  font-size: 1rem;
+`;
+
+export const FormVideo = styled.video`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  top: 0;
+  position: absolute;
+  z-index: -1;
 `;

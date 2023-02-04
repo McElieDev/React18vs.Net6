@@ -23,10 +23,9 @@ function Footer() {
           <FooterColumn id="footerLogo">
             <FooterLogo to="/">
               <SocialIcon src="./assets/logo.png" />
-              Delta
             </FooterLogo>
             <FooterAddress>
-              69 Street, Delta Building, US Road, Los Angeles 123
+              34 Von Weillegh Str, Marshall Town, Johannesburg 2001
             </FooterAddress>
 
             <Row align="center" margin="auto  0 0 0" gap="1rem">
@@ -53,7 +52,7 @@ function Footer() {
             </FooterLinkItems>
           ))}
         </FooterGrid>
-        <FooterRights>Delta © 2021</FooterRights>
+        <FooterRights>Carlton Digital Printing © 2023</FooterRights>
       </FooterWrapper>
     </Section>
   );

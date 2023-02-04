@@ -1,30 +1,30 @@
 export const pricingData = [
   {
     title: "Basic",
-    price: "$7.99 user/month after offer period",
+    images: "./assets/CARLTONFACB-K-SET UP1-1a.png",
+    price: "R70.99 user/month after offer period",
     numAcc: "50-100 accounts",
     features: [
-      "Secure accounts",
+      "Binding & Labels",
       "Best for small business",
       "Easy",
       "Affordable",
-      "1GB RAM",
     ],
   },
   {
     title: "Standard",
-    price: "$18.99 user/month after offer period",
+    images: "./assets/CARLTONFACB-K-SET UP1-1b.png",
+    price: "R18.99 user/month after offer period",
     numAcc: "50-500 accounts",
     features: [
-      "Secure accounts",
+      "Digital Printing accounts",
       "Best for small business",
       "Customizable",
-      "3GB RAM",
-      "1TB SSD",
     ],
   },
   {
     title: "Premium",
+    images: "./assets/CARLTONFACB-K-SET UP1-1c.png",
     price: "$32.50 user/month after offer period",
     numAcc: "50-1000 accounts",
     features: [
@@ -39,6 +39,15 @@ export const pricingData = [
 
   {
     title: "Enterprise",
+    images: "./assets/CARLTONFACB-K-SET UP1-1d.png",
+    price: "$55.50 user/month after offer period ",
+    numAcc: "1000+ Accounts",
+    features: ["Unlimited Storage", "Scalability", "Free DNS & Domain"],
+  },
+
+  {
+    title: "Enterprise",
+    images: "./assets/CARLTONFACB-K-SET UP1-1e.png",
     price: "$55.50 user/month after offer period ",
     numAcc: "1000+ Accounts",
     features: ["Unlimited Storage", "Scalability", "Free DNS & Domain"],

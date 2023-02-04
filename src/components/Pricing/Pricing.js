@@ -5,12 +5,14 @@ import {
   PricingSection,
   PricingWrapper,
   PricingContainer,
-  PricingCardInfo,
-  PricingCardPlan,
-  PricingCardCost,
-  PricingCardFeatures,
-  PricingCardText,
-  PricingCardFeature,
+  //PricingCardInfo,
+  ImageWrapper,
+  PricingImage,
+  //PricingCardPlan,
+  //PricingCardCost,
+  //PricingCardFeatures,
+  //PricingCardText,
+  //PricingCardFeature,
   PricingCard,
 } from "./PricingStyles";
 import { pricingData } from "../../data/PricingData";
@@ -23,30 +25,22 @@ function Pricing() {
           <Heading>Pick Your Best Option</Heading>
 
           <TextWrapper
-            mb="1.4rem"
+            mb="1.2rem"
             weight="600"
-            size="1.1rem"
-            color="white"
+            size="1.2rem"
+            color="#fcc470"
             align="center"
           >
-            Create, maintain and store your data with Delta.
+            We print the best price, best quality and fast delivery
           </TextWrapper>
           <PricingContainer>
             {pricingData.map((card, index) => (
               <PricingCard key={index}>
-                <PricingCardInfo>
-                  <PricingCardPlan>{card.title}</PricingCardPlan>
-                  <PricingCardCost>{card.price}</PricingCardCost>
-                  <PricingCardText>{card.description}</PricingCardText>
-                  <PricingCardFeatures>
-                    {card.features.map((feature, index) => (
-                      <PricingCardFeature key={index}>
-                        {feature}
-                      </PricingCardFeature>
-                    ))}
-                  </PricingCardFeatures>
+                <ImageWrapper key={index}>
+                  <PricingImage src={card.images} />
+                  {/* <PricingCardFeatures>{card.images}</PricingCardFeatures> */}
                   <Button>Get Started</Button>
-                </PricingCardInfo>
+                </ImageWrapper>
               </PricingCard>
             ))}
           </PricingContainer>

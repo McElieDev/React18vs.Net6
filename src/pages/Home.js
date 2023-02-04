@@ -4,6 +4,7 @@ import Contact from "../components/Contact/Contact";
 import { Content } from "../components/Content/Content";
 import Features from "../components/Features/Features";
 import Hero from "../components/Hero/Hero";
+import GoogleMap from "../components/Map/GoogleMap";
 import { heroTwo, heroThree } from "../data/HeroData";
 //import { heroOne, heroTwo, heroThree } from "../data/HeroData";
 
@@ -18,6 +19,7 @@ const Home = () => {
       <Content {...heroTwo} />
       <Content {...heroThree} />
       <Contact />
+      <GoogleMap />
     </>
   );
 };

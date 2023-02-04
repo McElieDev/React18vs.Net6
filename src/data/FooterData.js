@@ -39,14 +39,24 @@ export const footerData = [
   },
   {
     title: "Product",
-    links: ["Login", "Personal", "Business", "Team"],
+    links: ["Login", "Personal", "Business", "Partner"],
   },
   {
-    title: "Press",
-    links: ["Logos", "Events", "Stories", "Office"],
+    title: "Services",
+    links: [
+      "Digital Printing",
+      "Banners & Posters",
+      "Labels & Invitations",
+      "Events Branding",
+    ],
   },
   {
     title: "Legal",
-    links: ["GDPR", "Privacy Policy", "Terms of Service", "Disclaimer"],
+    links: [
+      "Permissions",
+      "Privacy Policy",
+      "Terms & Conditions",
+      "Disclaimer",
+    ],
   },
 ];

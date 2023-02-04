@@ -20,7 +20,7 @@ const Hero = () => {
           We provide the best digital printing services for clients nationwide.
         </HeroText>
         <ButtonWrapper>
-          <Link to="gallery-enquiry">
+          <Link to="/">
             <Button>Get Started</Button>
           </Link>
           <HeroButton>

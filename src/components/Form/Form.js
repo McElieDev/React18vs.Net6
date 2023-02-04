@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   FormColumn,
   FormWrapper,
@@ -6,6 +7,8 @@ import {
   FormSection,
   FormRow,
   FormLabel,
+  FormArea,
+  FormVideo,
   FormInputRow,
   FormMessage,
   FormButton,
@@ -15,27 +18,65 @@ import { Container } from "../../globalStyles";
 import validateForm from "./validateForm";
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPass, setConfirmPass] = useState("");
+  const [from_name, setName] = useState("");
+  const [from_email, setEmail] = useState("");
+  const [from_telephone, setTelephone] = useState("");
+  const [from_message, setMessage] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
+  //Send email using EmailJS
+
+  const form = useRef();
+
+  //End Send Email
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const resultError = validateForm({ name, email, password, confirmPass });
+    const resultError = validateForm({
+      from_name,
+      from_email,
+      from_telephone,
+      from_message,
+    });
 
     if (resultError !== null) {
       setError(resultError);
       return;
     }
+
+    //send the message
+    // const sendEmail = (e) => {
+    //   e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_pqj2vk6", //"YOUR_SERVICE_ID",
+        "template_1u71l3d", //"YOUR_TEMPLATE_ID",
+        form.current,
+        "xCcUGLdysAvEkILby" //"YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Message Sent Successfully");
+        },
+        (error) => {
+          console.log(error.text);
+          console.log("Failed to send message");
+        }
+      );
+    //};
+
+    //Clear the form data
     setName("");
     setEmail("");
-    setPassword("");
-    setConfirmPass("");
+    setTelephone("");
+    setMessage("");
     setError(null);
-    setSuccess("Application was submitted!");
+    setSuccess(
+      "Your quotation has been received successfully. A stuff member will be in touch with you shortly"
+    );
   };
 
   const messageVariants = {
@@ -45,50 +86,57 @@ const Form = () => {
 
   const formData = [
     {
-      label: "Name",
-      value: name,
+      label: "Fullname or Company Name",
+      name: "from_name",
+      value: from_name,
       onChange: (e) => setName(e.target.value),
       type: "text",
     },
     {
-      label: "Email",
-      value: email,
+      label: "Email Address",
+      name: "from_email",
+      value: from_email,
       onChange: (e) => setEmail(e.target.value),
       type: "email",
     },
     {
-      label: "Password",
-      value: password,
-      onChange: (e) => setPassword(e.target.value),
-      type: "password",
-    },
-    {
-      label: "Confirm Password",
-      value: confirmPass,
-      onChange: (e) => setConfirmPass(e.target.value),
-      type: "password",
+      label: "Mobile or Telephone Number",
+      name: "from_telephone",
+      value: from_telephone,
+      onChange: (e) => setTelephone(e.target.value),
+      type: "number",
     },
   ];
   return (
-    <FormSection>
+    <FormSection id="contactus">
+      <FormVideo src="./assets/hero.mp4" autoPlay muted />
       <Container>
         <FormRow>
           <FormColumn small>
-            <FormTitle>Get in touch</FormTitle>
-            <FormWrapper onSubmit={handleSubmit}>
+            <FormTitle>Custom Quote</FormTitle>
+            <FormWrapper onSubmit={handleSubmit} ref={form}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>
                   <FormLabel>{el.label}</FormLabel>
                   <FormInput
                     type={el.type}
+                    name={el.name}
                     placeholder={`Enter your ${el.label.toLocaleLowerCase()}`}
                     value={el.value}
                     onChange={el.onChange}
                   />
                 </FormInputRow>
               ))}
-
-              <FormButton type="submit">Submit</FormButton>
+              <FormLabel>Comment</FormLabel>
+              <FormArea
+                type="text"
+                name="from_message"
+                placeholder="Any Quote description!"
+                onChange={(e) => setMessage(e.target.value)}
+              >
+                {from_message}
+              </FormArea>
+              <FormButton type="submit">Send</FormButton>
             </FormWrapper>
             {error && (
               <FormMessage

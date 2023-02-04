@@ -62,6 +62,9 @@ const Navbar = () => {
                 </NavLinks>
               </NavItem>
             ))}
+            <NavItem>
+              <NavLinks to="/tel:0113542029">Tel: +27 11 354 2029</NavLinks>
+            </NavItem>
           </NavMenu>
         </NavbarContainer>
       </Nav>

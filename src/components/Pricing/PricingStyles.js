@@ -8,6 +8,30 @@ export const PricingSection = styled.div`
   background: #101522;
 `;
 
+export const PricingImage = styled.img`
+  width: 100%;
+  height: 400px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  vertical-align: middle;
+  padding-bottom: 1rem;
+`;
+
+export const ImageWrapper = styled.div`
+  width: 90%;
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  outline: none;
+  height: 430px;
+
+  @media screen and (min-width: 440px) {
+    border: 1px solid #bebebe;
+  }
+`;
+
 export const PricingWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -97,7 +121,7 @@ export const PricingCardText = styled.p`
 `;
 
 export const PricingCardFeatures = styled.ul`
-  margin: 16px 0 32px;
+  margin: 1px 0 32px;
   list-style: none;
   display: flex;
   flex-direction: column;
