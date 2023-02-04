@@ -6,7 +6,7 @@ const PricingPage = () => {
     <>
       <Pricing />
     </>
-  );
+  ); //1222
 };
 
 export default PricingPage;
